@@ -13,6 +13,7 @@ const BIO = "";
 // Icon names: https://fontawesome.com/search?o=r&m=free&f=brands
 const SOCIALS = [
   { name: "Discord", url: `https://discord.com/users/${1316875486374133811}`, icon: "fa-brands fa-discord" },
+  { name: "Instagram", url: "https://www.instagram.com/a.n.be11e", icon: "fa-brands fa-instagram" },
 ];
 
 // ---------- Music ----------
