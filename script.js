@@ -11,6 +11,12 @@ const BIO = "";
 // ---------- Social links ----------
 // To add a site: copy a line and change name, url and icon. To remove one: delete its line.
 // Icon names: https://fontawesome.com/search?o=r&m=free&f=brands
+const SOCIALS = [
+  { name: "Discord", url: `https://discord.com/users/${DISCORD_ID}`, icon: "fa-brands fa-discord" },
+  { name: "GitHub",  url: "https://github.com/YOUR_USERNAME",         icon: "fa-brands fa-github" },
+  { name: "X",       url: "https://x.com/YOUR_USERNAME",              icon: "fa-brands fa-x-twitter" },
+  { name: "YouTube", url: "https://youtube.com/@YOUR_CHANNEL",        icon: "fa-brands fa-youtube" },
+];
 
 // ---------- Music ----------
 const MUSIC_FILE = "./song.mp3";   // File name (on GitHub Pages upper/lower case matters)
