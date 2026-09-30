@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Browser tab title: change the text below -->
+  <title>Discord Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background: gradient + soft blobs (gives the glass something to blur) -->
+  <div class="animated-bg"></div>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+
+  <audio id="bg-music" loop></audio>
+
+  <main class="profile-container">
+    <header class="hero">
+      <div class="avatar-wrapper">
+        <img id="avatar" class="avatar" src="" alt="Avatar">
+        <img id="decoration" class="decoration" src="" alt="" style="display:none;">
+        <div id="status-dot" class="status-dot offline">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <defs>
+              <mask id="m-idle"><rect width="24" height="24" fill="#fff"/><circle cx="7.2" cy="7.2" r="5.2" fill="#000"/></mask>
+              <mask id="m-dnd"><rect width="24" height="24" fill="#fff"/><rect x="6.5" y="10.6" width="11" height="2.8" rx="1.4" fill="#000"/></mask>
+              <mask id="m-off"><rect width="24" height="24" fill="#fff"/><circle cx="12" cy="12" r="3.8" fill="#000"/></mask>
+            </defs>
+            <circle class="s-on"   cx="12" cy="12" r="9" fill="#23a55a"/>
+            <circle class="s-idle" cx="12" cy="12" r="9" fill="#f0b232" mask="url(#m-idle)"/>
+            <circle class="s-dnd"  cx="12" cy="12" r="9" fill="#f23f43" mask="url(#m-dnd)"/>
+            <circle class="s-off"  cx="12" cy="12" r="9" fill="#80848e" mask="url(#m-off)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="plate-row"><div class="plate-wrap">
+        <div id="nameplate" class="nameplate-box glass">
+          <video id="nameplate-video" class="nameplate-video" autoplay loop muted playsinline></video>
+          <div class="nameplate-text">
+            <h1 id="display-name">Loading...</h1>
+            <span id="username" class="username">@username</span>
+          </div>
+        </div>
+        <img id="avatar-small" class="avatar-small" src="" alt=""></div></div>
+    </header>
+
+    <section class="info-box glass">
+      <h2 class="box-title">About me</h2>
+      <p id="bio">No bio available.</p>
+    </section>
+
+    <section class="info-box glass">
+      <h2 id="activity-title" class="box-title">Activity</h2>
+      <div id="activity-content" class="activity-content">No recent activity</div>
+    </section>
+
+    <footer id="social-links" class="social-links"></footer>
+  </main>
+
+  <!-- Music button: swap "fa-headphones" for another Font Awesome icon (e.g. fa-volume-high) if you like -->
+  <button id="mute-btn" class="mute-btn glass muted" title="Play / Mute">
+    <i id="mute-icon" class="fa-solid fa-volume-high"></i><span class="slash"></span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
